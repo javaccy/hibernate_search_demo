@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://127.0.0.1:5432/test</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">yankelin</property>
+        <property name="hbm2ddl.auto">update</property>
+        <!--<property name="hibernate.show_sql">true</property>-->
+        <property name="show_sql">true</property>
+<!--        <property name="ejb.naming_strategy">com.javaccy.config.CustomNamingStrategy</property>-->
+       <!-- <property name="hibernate.ejb.naming_strategy">com.javaccy.config.CustomNamingStrategy</property>-->
+        <property name="hibernate.search.default.directory_provider">filesystem</property>
+        <property name="hibernate.search.default.indexBase">/home/yun/Desktop/target/indexes</property>
+        <mapping class="com.javaccy.entity.User"/>
+
+        <!-- DB schema will be updated if needed -->
+    </session-factory>
+</hibernate-configuration>
